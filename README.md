@@ -68,7 +68,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#features">Features</a></li>
 	<li><a href="#To-Do-List">To Do List</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -99,18 +99,14 @@ If you don't want to compile, You can find the executable in releases.
 PascalXE / PCompiler / Easyphp 2.0:
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
 * https://hotdogishot.github.io/PCompiler/ <br>
-* https://phpsources.net/script/php/easyphp/78-5_easyphp,2.0b1
 <!-- USAGE EXAMPLES -->
-## Usage
+## Features
 
-For pascal, just run the .pas file and PascalXE will open up.
-For JS/PHP/HTML Files and running them locally you have to do the following:
-  <ol>
-    <li>Open Easyphp.</li>
-    <li>Ignore the update notification.</li>
-    <li>Right click on the tray icon then click administration.</li>
-  </ol>
-Once there, You can access on PhpMyAdmin pannel and localweb which is located in Easyphp installation folder in 'www'. 
+* User/Mail:Pass -> User/Mail.txt + Pass.txt (Combo User Pass Splitter)
+* Mail:Pass -> User:Pass (Combo "@mail.com" Remover)
+* User/Mail:Pass + Capture -> User/Mail:Pass (Combo Filter)
+* User/Mail.txt + Pass.txt -> User/Mail:Pass.txt
+* Duplicate Cleaner (UNSTABLE)
 
 <!-- ROADMAP -->
 ## Roadmap
