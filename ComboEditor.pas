@@ -5,7 +5,7 @@ crt,sysutils;
 Type
 tab = Array[1..1000000] Of String;
 Var
-  noDupe,ComboCombined,P,U,FilterPass,UserPass,password,User,F: TextFile;
+  noDupe,ComboCombined,P,U,FilterPass,UserPass,password,User,F,splitter: TextFile;
   tableau3,tableau4,tableau2,tableau: tab;
   Count,Info: Integer;
   g,k,i: Integer;
@@ -210,55 +210,62 @@ Begin
 End;
 End;
 
-{Procedure SplitDuo;
+Procedure SplitDuo;
+Var
+n,j,count2:Integer;
+ch:string;
 Begin
+	Repeat
+		ch:='Y';
   Write('Please type how many files you want to make: ');
   Readln(n);
-  count2 := count div n;
+		if (n>count) or (round(count / n) > count / n) then
+		Begin
+		clrscr;
+		Writeln('[',TimeToStr(Time), ' Warning]: Some File(s) might to be empty! Are you sure you want to proceed? Y/N?');
+		readln(ch);
+		clrscr;
+		end;
+	until ch = 'Y';
+  count2 := round(count / n);
+	Write('[',TimeToStr(Time), ' Info]: Each file will contain ', (count / n):0:2,' lines');
+	Writeln(' or Approx. ',count2,' lines...');
+	Writeln('[',TimeToStr(Time), ' Info]: Trying to Split into ', n,' files...');
+	writeln('--');
   For i:= 1 To n Do
 	Begin
     Delete (path, Pos('combo.txt', path), 9);
   Str(i, ch);
   output := path+'\Split #'+ch+'.txt';
+	Writeln('[',TimeToStr(Time), ' Info]: Creating Output: ', output);
   AssignFile(Splitter,Output);
   Try
     Rewrite(Splitter);
 		if i=1 then
-		For k:= 1 To count2*i Do
+		For k:= 1 To count2 Do
 			Writeln(Splitter,tableau[k]+':'+tableau2[k])
 		Else
-    For k:= count2*(i-1) to (count2*i) -1 Do
-      Writeln(Splitter,tableau[k]+':'+tableau2[k]);
+		Begin
+				for k:= count2*(i-1)+1 to (count2*i) Do
+				if (tableau[k] <> '') and (tableau2[k] <> '') then
+      		Writeln(Splitter,tableau[k]+':'+tableau2[k])
+		end;
   Finally
     Close(Splitter);
 End;
 end;
-End;
-
-Procedure Split;
-Begin
-Write('Please type how many files you want to make: ');
-  Readln(n);
-  count2 := count div n;
-  For i:= 1 To n Do
+	if count mod n <> 0 Then
 	Begin
-    Delete (path, Pos('combo.txt', path), 9);
-  Str(i, ch);
-  output := path+'\Split #'+ch+'.txt';
-  AssignFile(Splitter,Output);
-  Try
-    Rewrite(Splitter);
-		if I <> n then
-    For k:= count2*(i-1) +3 to (count2*i) +2 Do
-      Writeln(Splitter,tableau[k]+':'+tableau2[k]);
-		if I = N Then
-		for k:= count2*(i-1) +3  to (count2*i) +3 Do
-		Writeln(Splitter,tableau[k]+':'+tableau2[k])
-  Finally
-    Close(Splitter);
+		append(Splitter);
+		for j:= k+1 to (k+count2 mod n)+1 Do
+		if (tableau[j] <> '') and (tableau2[j] <> '') then 
+			writeln(Splitter, tableau[j],':',tableau2[j]);
+		close(splitter);
 	end;
-end;								
-end;}
+	writeln('--');
+    delay(500);
+    Writeln('[',TimeToStr(Time), ' Info]: Splitting Complete!');
+End;
 Begin
 TextBackground(black);
 TextColor(white);
@@ -276,7 +283,7 @@ Crt.ClrScr;
     Writeln('3) User/Mail:Pass Capture Filter');
     Writeln('4) Combo Combiner');
     Writeln('5) Duplicate Cleaner');
-    Writeln('6) Combo Splitter (Soon)');
+    Writeln('6) Combo Splitter');
     Readln(Info);
     If (info = 1) And (FileExists(getcurrentdir+'\combo.txt')) = True Then
       Begin
@@ -305,6 +312,11 @@ Crt.ClrScr;
         Filterfile;
         removedupe;
       End;
+			    If (info = 6) And (FileExists(getcurrentdir+'\combo.txt')) = True Then
+      Begin
+        Filterfile;
+        SplitDuo;
+      End;
     If info = 1 Then
       If (FileExists(getcurrentdir+'\combo.txt')) = False Then
         Writeln('[',TimeToStr(Time), ']Error: Combo.txt not found');
@@ -320,5 +332,8 @@ Crt.ClrScr;
     If info = 5 Then
       If (FileExists(getcurrentdir+'\combo.txt')) = False Then
         Writeln('[',TimeToStr(Time), '] Error: Combo.txt not found');
-  Until info In [1..5];
+	If info = 6 Then
+    If (FileExists(getcurrentdir+'\combo.txt')) = False Then
+    	Writeln('[',TimeToStr(Time), '] Error: Combo.txt not found');
+  Until info In [1..6];
 End.
