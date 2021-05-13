@@ -36,18 +36,18 @@
     <img src="explorer_0KnDLzyOVG.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Computer Science Studies // BAC Version</h3>
+  <h3 align="center">Pascal/Delphi Combo Editor.</h3>
 
   <p align="center">
-    My Personal Corrections for Tunisia's National Exams for Computer Science (CS/SI).
+    A safe combo editor for peeps that crack :))
     <br />
-    <a href="https://github.com/Jev1337/PD-Combo-Editor"><strong>Explore the files »</strong></a>
+    <a href="https://github.com/Jev1337/PD-Combo-Editor"><strong>Explore the Project »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Jev1337/PD-Combo-Editor/issues">Report Bug</a>
     ·
     <a href="https://github.com/Jev1337/PD-Combo-Editor/issues">Request Change</a>
-  </p>
+</p>
 </p>
 
 
@@ -68,7 +68,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#features">Features</a></li>
 	<li><a href="#To-Do-List">To Do List</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -80,7 +80,7 @@
 <!-- ABOUT THE Corrections -->
 ## About The Project
 
-<div align="center"><a href="https://sourceforge.net/projects/pascalxe/" target="_blank"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/" target="_blank"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a>
+<div align="center"><a href="https://sourceforge.net/projects/pascalxe/" target="_blank"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/" target="_blank"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div><br>
 This program was made for fun by me back in 2019 when I had 0 knowledge in Pascal/Delphi.
 <br>You may even notice that it has 0 optimizations.
 
@@ -99,18 +99,14 @@ If you don't want to compile, You can find the executable in releases.
 PascalXE / PCompiler / Easyphp 2.0:
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
 * https://hotdogishot.github.io/PCompiler/ <br>
-* https://phpsources.net/script/php/easyphp/78-5_easyphp,2.0b1
 <!-- USAGE EXAMPLES -->
-## Usage
+## Features
 
-For pascal, just run the .pas file and PascalXE will open up.
-For JS/PHP/HTML Files and running them locally you have to do the following:
-  <ol>
-    <li>Open Easyphp.</li>
-    <li>Ignore the update notification.</li>
-    <li>Right click on the tray icon then click administration.</li>
-  </ol>
-Once there, You can access on PhpMyAdmin pannel and localweb which is located in Easyphp installation folder in 'www'. 
+* User/Mail:Pass -> User/Mail.txt + Pass.txt (Combo User Pass Splitter)
+* Mail:Pass -> User:Pass (Combo "@mail.com" Remover)
+* User/Mail:Pass + Capture -> User/Mail:Pass (Combo Filter)
+* User/Mail.txt + Pass.txt -> User/Mail:Pass.txt
+* Duplicate Cleaner (UNSTABLE)
 
 <!-- ROADMAP -->
 ## Roadmap
