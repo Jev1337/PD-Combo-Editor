@@ -80,7 +80,7 @@
 <!-- ABOUT THE Corrections -->
 ## About The Project
 
-<div align="center"><a href="https://sourceforge.net/projects/pascalxe/" target="_blank"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/" target="_blank"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a><br>
+<div align="center"><a href="https://sourceforge.net/projects/pascalxe/" target="_blank"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/" target="_blank"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div><br>
 This program was made for fun by me back in 2019 when I had 0 knowledge in Pascal/Delphi.
 <br>You may even notice that it has 0 optimizations.
 
