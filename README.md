@@ -106,7 +106,7 @@ PascalXE / PCompiler / Easyphp 2.0:
 * Mail:Pass -> User:Pass (Combo "@mail.com" Remover)
 * User/Mail:Pass + Capture -> User/Mail:Pass (Combo Filter)
 * User/Mail.txt + Pass.txt -> User/Mail:Pass.txt
-* Duplicate Cleaner (UNSTABLE)
+* Duplicate Cleaner
 
 <!-- ROADMAP -->
 ## Roadmap
