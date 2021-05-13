@@ -1,12 +1,12 @@
 Program ComboFilter;
 {$MODE DELPHI}
 Uses
-Wincrt,crt,sysutils;
+crt,sysutils;
 Var
   noDupe,ComboCombined,P,U,FilterPass,UserPass,password,User,F: TextFile;
   tableau3,tableau4,tableau2,tableau: Array[1..1000000] Of String;
   Count,Info: Integer;
-  g,k,j,i: Integer;
+  g,k,i: Integer;
   output,path: String;
 
 Procedure CollectUser;
@@ -159,17 +159,14 @@ End;
 End;
 Procedure RemoveDupe;
 Begin
-  For i:= 1 To count Do
+
+  For i:= 1 To count-1 Do
     Begin
-      For j:= 1 To count Do
-        Begin
-          If j<>i Then
-            If (tableau[j] = tableau[i]) And (tableau2[J] = tableau2[i]) Then
+            If (tableau[i+1] = tableau[i]) And (tableau2[i+1] = tableau2[i]) Then
               Begin
-                Delete(tableau[i],1,10000);
-                Delete(tableau2[i],1,10000);
-              End;
-        End;
+                tableau[i]:='';
+                tableau2[i]:='';
+							end;
     End;
   Delete (path, Pos('combo.txt', path), 9);
   output := path+'\NoDuplicate.txt';
@@ -179,13 +176,13 @@ Begin
     g := 0;
     For k:= 1 To Count Do
       Begin
-        tableau[k] := tableau[k]+':';
-        If tableau[k] = ':' Then
-          Begin
-            tableau[k] := tableau[k+1];
-            G := G+1;
-          End;
-        Writeln(NoDupe,tableau[k]+tableau2[k]);
+				if (tableau[k]<>'') and (tableau[k]<>'') then
+				Begin
+        	tableau[k] := tableau[k]+':';
+        	Writeln(NoDupe,tableau[k]+tableau2[k]);
+				end
+				Else
+									g:=g+1;
       End;
   Finally
     Close(NoDupe);
