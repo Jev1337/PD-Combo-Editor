@@ -36,10 +36,10 @@
     <img src="explorer_0KnDLzyOVG.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Computer Science Studies // BAC Version</h3>
+  <h3 align="center">Pascal/Delphi Combo Editor.</h3>
 
   <p align="center">
-    Pascal/Delphi Combo Editor.
+    A safe combo editor for peeps that crack :))
     <br />
     <a href="https://github.com/Jev1337/PD-Combo-Editor"><strong>Explore the Project »</strong></a>
     <br />
