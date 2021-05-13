@@ -2,9 +2,11 @@ Program ComboFilter;
 {$MODE DELPHI}
 Uses
 crt,sysutils;
+Type
+tab = Array[1..1000000] Of String;
 Var
   noDupe,ComboCombined,P,U,FilterPass,UserPass,password,User,F: TextFile;
-  tableau3,tableau4,tableau2,tableau: Array[1..1000000] Of String;
+  tableau3,tableau4,tableau2,tableau: tab;
   Count,Info: Integer;
   g,k,i: Integer;
   output,path: String;
@@ -157,16 +159,31 @@ Begin
     Writeln('[',TimeToStr(Time), ' Info]: done!');
 End;
 End;
+
+Function Search(t:tab;t2:tab;i,n:Integer):Boolean;
+Var
+j:Integer;
+test:Boolean;
+Begin
+	test:=true;
+	j:=i;
+	Repeat
+		inc(j);
+			test:=(t[i] = t[j]) and (t2[i]=t2[j]);
+	until (j >= n) or (test);
+	search:=test;
+end;
 Procedure RemoveDupe;
 Begin
-
-  For i:= 1 To count-1 Do
+  For i:= 1 To count Do
     Begin
-            If (tableau[i+1] = tableau[i]) And (tableau2[i+1] = tableau2[i]) Then
+            If search(tableau,tableau2,i,count) Then
               Begin
                 tableau[i]:='';
                 tableau2[i]:='';
-							end;
+							end
+						Else
+							g:=g+1;
     End;
   Delete (path, Pos('combo.txt', path), 9);
   output := path+'\NoDuplicate.txt';
