@@ -92,7 +92,7 @@ This program was made for fun by me back in 2019 when I had 0 knowledge in Pasca
 ## Getting Started
 
 To compile the file, You will need a Pascal/Delphi Compiler. I personally use my school issued IDE which is PascalXE. You can also use a Web Based IDE called PCompiler (that a friend made) to compile with.
-If you don't want to compile, You can find the executable in <a href="https://github.com/Jev1337/PD-Combo-Editor/releases/tag/2.0">releases</a>.
+If you don't want to compile, You can find the executable in <a href="https://github.com/Jev1337/PD-Combo-Editor/releases/tag/2.1">releases</a>.
 
 ### Prerequisites
 
