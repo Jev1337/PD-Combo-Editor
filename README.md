@@ -40,6 +40,7 @@
 
   <p align="center">
     A safe combo editor for peeps that crack :))
+	  </p>
     <br />
     <a href="https://github.com/Jev1337/PD-Combo-Editor"><strong>Explore the Project »</strong></a>
     <br />
@@ -47,7 +48,7 @@
     <a href="https://github.com/Jev1337/PD-Combo-Editor/issues">Report Bug</a>
     ·
     <a href="https://github.com/Jev1337/PD-Combo-Editor/issues">Request Change</a>
-  </p>
+
 </p>
 
 
